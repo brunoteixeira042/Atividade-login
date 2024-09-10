@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Tela de Login -->
+    <div id="login-screen" class="screen">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="username">Usuário:</label>
+            <input type="text" id="login-username" required>
+            <label for="password">Senha:</label>
+            <input type="password" id="login-password" required>
+            <button type="submit">Entrar</button>
+        </form>
+        <p>Não tem uma conta? <a href="#" id="go-to-register">Cadastre-se</a></p>
+    </div>
+
+    <!-- Tela de Cadastro -->
+    <div id="register-screen" class="screen" style="display:none;">
+        <h2>Cadastro</h2>
+        <form id="register-form">
+            <label for="username">Usuário:</label>
+            <input type="text" id="register-username" required>
+            <label for="password">Senha:</label>
+            <input type="password" id="register-password" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+        <p>Já tem uma conta? <a href="#" id="go-to-login">Voltar para o Login</a></p>
+    </div>
+
+    <!-- Tela de Boas-Vindas -->
+    <div id="welcome-screen" class="screen" style="display:none;">
+        <h2>Bem-vindo, <span id="user-welcome"></span>!</h2>
+        <button id="logout">Sair</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
