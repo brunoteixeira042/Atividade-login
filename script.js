@@ -1,5 +1,8 @@
 // Array para armazenar os usuários em memória
-let users = [];
+let users = [{
+    password:
+        "admin123", username: "admin"
+}];
 
 // Função para adicionar um novo usuário ao array
 function addUser(username, password) {
@@ -30,10 +33,15 @@ document.getElementById('go-to-login').addEventListener('click', function () {
 
 // Lógica de cadastro
 document.getElementById('register-form').addEventListener('submit', function (e) {
+    
     e.preventDefault();
     const username = document.getElementById('register-username').value;
     const password = document.getElementById('register-password').value;
-
+    const regex =/^[a-zA-Z]*$/
+    if (!regex.test(username)) {
+        alert('O campo nome deve conter apenas letras.');
+        return
+    }    
     // Verifica se o usuário já existe
     if (users.find(user => user.username === username)) {
         alert('Usuário já cadastrado!');
